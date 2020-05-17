@@ -1,5 +1,6 @@
 from random import randint
 from faker import Faker
+from num2words import num2words
 
 
 def ex2_gen(filename, max_lines=10):
@@ -18,3 +19,7 @@ def ex3_gen(filename, size=10, salary_base=20000):
             print(f'{fake.last_name()} {randint(salary_base * 0.5, salary_base * 1.5)}', file=f)
 
 
+def ex4_gen(filename, count=20):
+    with open(filename, 'w') as f:
+        for digit in range(0, count):
+            print(f'{num2words(digit)} - {digit}', file=f)
