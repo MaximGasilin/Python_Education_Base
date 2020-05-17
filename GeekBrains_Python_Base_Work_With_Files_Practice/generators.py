@@ -1,4 +1,4 @@
-from random import randint, choice
+from random import randint, choice as random_choice
 from faker import Faker
 from num2words import num2words
 
@@ -50,7 +50,7 @@ def ex7_gen(filename, size=10, av_summ=95000):
     with open(filename, 'w', encoding='utf-8') as f:
         for i in range(0, size):
             print(
-                f'{fake.company()} {choice(LIST_OF_ORG_FORMS)} '
+                f'{fake.company()} {random_choice(LIST_OF_ORG_FORMS)} '
                 f'{randint(av_summ * 0.95, av_summ * 1.05)} '
                 f'{randint(av_summ * 0.7, av_summ * 1.3)}',
                 file=f)
