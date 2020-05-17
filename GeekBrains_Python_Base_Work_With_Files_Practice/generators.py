@@ -45,7 +45,6 @@ LIST_OF_ORG_FORMS = ('ООО', 'ПАО')
 
 
 def ex7_gen(filename, size=10, av_summ=95000):
-
     Faker.seed(0)
     fake = Faker()
     with open(filename, 'w', encoding='utf-8') as f:
