@@ -36,6 +36,6 @@ def ex6_gen(filename):
             plan_pr = randint(0, 21)
             plan_lb = randint(0, 11)
 
-            print(f'{el}: {f"{plan_le} (л)" if plan_le > 0 else ""}'
-                  f'{f" - {plan_pr} (пр)" if plan_pr > 0 else " - "}'
-                  f'{f" - {plan_lb} (лаб)" if plan_lb > 0 else " - "}', file=file_obj)
+            print(f'{el}: {f"{plan_le}(л) " if plan_le > 0 else "-"}'
+                  f'{f"{plan_pr}(пр) " if plan_pr > 0 else "-"}'
+                  f'{f"{plan_lb}(лаб)" if plan_lb > 0 else "-"}', file=file_obj)
