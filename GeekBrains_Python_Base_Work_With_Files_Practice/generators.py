@@ -39,3 +39,19 @@ def ex6_gen(filename):
             print(f'{el}: {f"{plan_le}(л) " if plan_le > 0 else "- "}'
                   f'{f"{plan_pr}(пр) " if plan_pr > 0 else "- "}'
                   f'{f"{plan_lb}(лаб)" if plan_lb > 0 else "-"}', file=file_obj)
+
+                  
+LIST_OF_ORG_FORMS = ('ООО', 'ПАО')
+
+
+def ex7_gen(filename, size=10, av_summ=95000):
+
+    Faker.seed(0)
+    fake = Faker()
+    with open(filename, 'w', encoding='utf-8') as f:
+        for i in range(0, size):
+            print(
+                f'{fake.company()} {LIST_OF_ORG_FORMS[randint(0, 1)]} '
+                f'{randint(av_summ * 0.95, av_summ * 1.05)} '
+                f'{randint(av_summ * 0.7, av_summ * 1.3)}',
+                file=f)
