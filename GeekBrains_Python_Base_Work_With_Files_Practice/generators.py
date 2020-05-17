@@ -2,11 +2,11 @@ from random import randint
 from faker import Faker
 
 
-def ex2_gen(filename, lines = 10):
+def ex2_gen(filename, max_lines=10):
     Faker.seed(0)
     fake = Faker()
     with open(filename, 'w') as f:
-        for i in range(0, lines):
+        for i in range(0, randint(1, max_lines)):
             print(f'{fake.text()}', file=f)
 
 
